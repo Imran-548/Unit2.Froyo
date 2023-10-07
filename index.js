@@ -16,16 +16,19 @@ const flavors = { vanilla: 0, strawberry: 0, coffee: 0 };
 
 function countorders(choices) {
   for (let i = 0; i < choices.length; i++) {
-    if (choices[i] == vanilla) {
+    if (choices[i] === "vanilla") {
       flavors.vanilla += 1;
-    } else if (choices[i] == strawberry) {
+    } else if (choices[i] == "strawberry") {
       flavors.strawberry += 1;
-    } else if (choices[i] == coffee) {
+    } else if (choices[i] == "coffee") {
       flavors.coffee += 1;
     }
   }
   return flavors;
 }
-console.log(choices);
-console.log(flavors);
-console.log(`You have given ${countorders(choices)} numbers.`);
+
+console.log(countorders(choices));
+
+console.log(`Vanilla: ${flavors.vanilla}`);
+console.log(`Strawberry: ${flavors.strawberry}`);
+console.log(`Coffee: ${flavors.coffee}`);
